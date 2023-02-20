@@ -10,10 +10,10 @@ namespace ShapeTracker.Tests
     public class RectangleTests
   {
     [TestMethod]
-    public void TriangleConstructor_CreatesInstanceOfTriangle_Triangle()
+    public void RectangleConstructor_CreatesInstanceOfRectangle_Rectangle()
     {
-      Triangle newTriangle = new Triangle(2, 3, 8);
-      Assert.AreEqual(typeof(Triangle), newTriangle.GetType());
+      Rectangle newRectangle = new Rectangle();
+      Assert.AreEqual(typeof(Rectangle), newRectangle.GetType());
     }
   }
 }

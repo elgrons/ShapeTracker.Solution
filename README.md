@@ -8,8 +8,6 @@
 
 * C#
 * .Net
-* _you used in your project_
-* _here_
 
 ## Description
 

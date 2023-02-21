@@ -9,7 +9,7 @@ namespace ShapeTracker.Tests
 
     public class RectangleTests
   {
-    [TestMethod]
+  [TestMethod]
     public void RectangleConstructor_CreatesInstanceOfRectangle_Rectangle()
     {
       Rectangle newRectangle = new Rectangle(4);
@@ -21,9 +21,26 @@ namespace ShapeTracker.Tests
     {
       int length1 = 4;
       Rectangle newRectangle = new Rectangle(4);
-      Assert.AreEqual(typeof(Rectangle), newRectangle.GetType());
       int result = newRectangle.Side1;
       Assert.AreEqual(length1, result);
     }
+  [TestMethod]
+    public void SetSide1_SetValueOfSide1_Void()
+    {
+    Rectangle newRectangle = new Rectangle(4);
+    int firstSide1 = 42;
+    newRectangle.Side1 = firstSide1;
+    Assert.AreEqual(newRectangle.Side1, firstSide1);
+    }
+  
+    [TestMethod]
+    public void GetSideLengthTwo_ReturnsSecondSide_Int()
+    {
+    Rectangle newRectangle = new Rectangle(4);
+    int secondSide = 5;
+    newRectangle.Side2 = secondSide;
+    Assert.AreEqual(newRectangle.Side2, secondSide);
+    }
+  
   }
 }

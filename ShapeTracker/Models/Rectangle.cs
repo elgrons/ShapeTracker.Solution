@@ -2,6 +2,16 @@ namespace ShapeTracker.Models
 {
   public class Rectangle
   {
-    // Rectangle code here.
+  private int _side1;
+  public int Side1
+  {
+    get { return _side1; }
+    set { _side1 = value; }
+  }
+  public int Side2 { get; set; }
+  public Rectangle (int length1)
+  {
+    _side1 = length1;
+  }
   }
 }

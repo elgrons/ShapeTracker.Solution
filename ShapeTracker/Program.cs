@@ -59,16 +59,24 @@ namespace ShapeTracker
       Console.WriteLine("-----------------------------------------");
       Console.WriteLine("What's next?");
       Console.WriteLine("Would you like to check a new triangle (new)?");
-      Console.WriteLine("Please enter 'new' to check the type of a new triangle. To exit, enter any key.");
+      Console.WriteLine("Please enter 'new' to check the type of a new triangle. Please enter 'all' to see a list of all created triangles. To exit, enter any key.");
+      // could add branching logic for GetAll() in line above -- enter "all" to see all triangles
       string userResponse = Console.ReadLine(); 
       if (userResponse == "new" || userResponse == "New")
       {
-        Main();
+      } else if (userResponse == "all"|| userResponse == "All") // added for GetAll()
+      {
+        var listAll = Triangle.GetAll();
+        foreach(Triangle item in listAll)
+        {
+          Console.WriteLine(result);
+        }
       }
       else
       {
         Console.WriteLine("Goodbye!");
       }
+      // Main();
     }
   }
 }
